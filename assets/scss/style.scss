@@ -25,6 +25,21 @@ body{
     z-index: -2;
 }
 
+.navbar{
+    transition: all linear .5s;
+}
+
+.btn{
+    &-outline-gold{
+        border: 1px solid #b38d12;
+        color: #b38d12;
+        &:hover, &:active{
+            background: #b38d12;
+            color: #fff;
+        }
+    }
+}
+
 .hero{
     min-height: 100vh;
     width: 100%;
@@ -86,7 +101,7 @@ body{
     }
 }
 
-.info, .date{
+.info, .date, .map{
     &-wrapper{
         padding: 5rem 0;
     }
@@ -97,9 +112,12 @@ body{
         margin-bottom: 1rem;
     }
     &-name{
-        font-size: 3rem;
+        font-size: 1.6rem;
         color: #c69a00;
         font-family: 'Dancing Script', cursive;
+        @media screen and (min-width: 992px) {
+            font-size: 3rem;
+        }
     }
     &-parent{
         font-family: 'Cormorant Garamond', serif;
